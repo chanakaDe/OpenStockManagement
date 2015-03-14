@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="GRNID" class="java.lang.String"/>
+	<parameter name="SOID" class="java.lang.String"/>
+	<parameter name="SUPPLIER" class="java.lang.String"/>
+	<parameter name="OD" class="java.lang.String"/>
+	<parameter name="OrderReceivedDate" class="java.lang.String"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="Volume" class="java.lang.String"/>
+	<field name="OrderedQty" class="java.lang.String"/>
+	<field name="RecievedQty" class="java.lang.String"/>
+	<field name="Varience" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="36" width="162" height="28"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOOD RECIEVED NOTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="0" width="190" height="64"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dumbara Water (Pvt.) Limited]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GRN ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="137" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Order ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="90" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="33" width="111" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ordered Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="71" width="164" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Recieved Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{GRNID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="33" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{SOID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="0" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{SUPPLIER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="33" width="84" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{OD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="71" width="116" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{OrderReceivedDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="2" width="43" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="2" width="55" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Volume]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="2" width="69" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OrderedQty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="2" width="73" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RecievedQty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="2" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Varience]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="26" y="0" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="0" width="67" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Volume}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="88" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OrderedQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{RecievedQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Varience}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="341" y="25" width="144" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature  .......................]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

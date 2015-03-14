@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LoanID" class="java.lang.String"/>
+	<parameter name="EmpID" class="java.lang.String"/>
+	<parameter name="Amount" class="java.lang.String"/>
+	<parameter name="LoanTerm" class="java.lang.String"/>
+	<parameter name="InterestRate" class="java.lang.String"/>
+	<parameter name="MonthlyPayment" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement x="20" y="20" width="191" height="62" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dumbara Water (PVT) LTD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="302" y="20" width="293" height="26" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="20" isBold="true" isItalic="true" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[ Short Form Loan Policy ]]></text>
+				</staticText>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="495" y="49" width="100" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="62">
+			<staticText>
+				<reportElement x="0" y="1" width="69" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="1" width="82" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoanID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="21" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EmpID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="21" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID of Employee :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="1" width="93" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan Amount :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="333" y="1" width="83" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="21" width="81" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan Term :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="333" y="21" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoanTerm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interest Rate :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="42" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{InterestRate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="42" width="108" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Payment :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="348" y="42" width="127" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MonthlyPayment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="205">
+			<line>
+				<reportElement x="-20" y="0" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="15" width="555" height="49"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[The satate or interest of the land identified in this schedule A and which is encumbered by the insuared party is fee simple and  is at date of policy , vested and borrow shown in the insured loan policy as mentioned above.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="75" width="211" height="50"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[The above loan is successessfully issued the the employee in Dumbara Water PVT LTD ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="135" width="58" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="155" width="149" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature : ............................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="175" width="149" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name : ...................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="75" width="273" height="80"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I here by accept that I recieved the above loan and I here by accept all the condition to pay the loan in time. Unless I dissmiss to pay the loan, I will aagree to pay any extra fee according to the loan policy.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="165" width="138" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature : .....................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="185" width="138" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name : .............................]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
